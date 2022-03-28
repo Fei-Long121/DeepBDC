@@ -6,5 +6,5 @@ We provide a PyTorch implementation of DeepBDC for few-shot learning. If you use
   `author={Xie, Jiangtao and Long, Fei and Lv, Jiaming and Wang, Qilong and Li, peihua},`<br> 
   `booktitle={CVPR},`<br>
   `year={2022}`<br>
-'}`
+`}`<br>
 
