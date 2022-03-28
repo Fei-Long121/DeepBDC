@@ -71,7 +71,7 @@ For example, run
 ```
 python train_pretrain.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method stl_bdc --image_size 84 --reduce_dim 128 --train_aug --gpu 0
 ```
-#### self distillation
+#### Self distillation
 ```
 python train_distillation.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --teacher_path [TEACHER_MODEL_PATH]
 ```
