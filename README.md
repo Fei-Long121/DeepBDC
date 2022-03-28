@@ -32,7 +32,7 @@ cd DeepBDC
   Note that all the images need to be stored into a file named "images", and the data splits are stored into "train.csv", "val.csv" and "test.csv", respectively.
  ## Train and Test
 ### **Meta DeepBDC**
-##- pretrain
+## - pretrain
 ```
 python train_pretrain.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --[OTHER_OPTISIONS]
 ```
