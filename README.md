@@ -7,7 +7,7 @@ If you use this code for your research, please cite our paper.<br>
   author={Xie, Jiangtao and Long, Fei and Lv, Jiaming and Wang, Qilong and Li, peihua}, 
   booktitle={CVPR},
   year={2022}
- }<br>
+ }
 ```
 [Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com)<br>
 [Jiangtao Xie](www.biying.com), FeiLong, Jiaming Lv, Qilong Wang, Peihua Li
