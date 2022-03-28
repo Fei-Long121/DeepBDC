@@ -31,8 +31,8 @@ cd DeepBDC
 - [tieredImageNet](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0).<br> 
   Note that all the images need to be stored into a file named "images", and the data splits are stored into "train.csv", "val.csv" and "test.csv", respectively.
  ## Train and Test
-### -**Meta DeepBDC**
-**pretrain**
+### **Meta DeepBDC**
+-pretrain
 ```
 python train_pretrain.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --[OTHER_OPTISIONS]
 ```
@@ -41,7 +41,7 @@ For example, run
 ```
 python train_pretrain.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method meta_bdc --image_size 84 --reduce_dim 640 --train_aug --gpu 0
 ```
-**meta train**
+-meta train
 ```
 python train_meta.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --n_shot [N_SHOT] --pretrain_path [PRETRAIN_MODEL_PATH]
 ```
