@@ -11,3 +11,18 @@ If you use this code for your research, please cite our paper.<br>
 ```
 [Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com)<br>
 [Jiangtao Xie](www.biying.com), FeiLong, Jiaming Lv, Qilong Wang, Peihua Li
+## Prerequisites
+- Linux
+- Python 3.5
+- Pytorch 1.3
+- GPU + CUDA CuDNN
+- pillow, torchvision, scipy, numpy
+
+## Getting Started
+### Installation
+
+- Clone this repo:
+```bash
+git clone https://github.com/WenbinLee/DeepBDC.git
+cd DeepBDC
+```
