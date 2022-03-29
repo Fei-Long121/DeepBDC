@@ -171,11 +171,11 @@ git clone https://github.com/Fei-Long121/DeepBDC.git
 cd DeepBDC
 ```
 ### Datasets
-- [miniImageNet](https://drive.google.com/file/d/1fUBrpv8iutYwdL4xE1rX_R9ef6tyncX9/view)
-- [tieredImageNet](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0)<br> 
-- [CUB](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0)<br>
-- [Aircraft](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0)<br>
-- [Cars](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0)<br>
+- [miniImageNet](www.biying.com)
+- [tieredImageNet](www.biying.com)<br> 
+- [CUB](www.biying.com)<br>
+- [Aircraft](www.biying.com)<br>
+- [Cars](www.biying.com)<br>
 ### **For Meta DeepBDC**
 1. `cp run/miniImagenet/meta_deepbdc.sh ./`
 2.  modify the dataset path in `meta_deepbdc.sh`
@@ -189,15 +189,15 @@ cd DeepBDC
 ## Download  Models
 
 
-[Pre-trained Models](https://drive.google.com/file/d/1Prn7_41NVrZbnePAlSiKjD21Jlz0LKJM/view?usp=sharing)
+[Pre-trained Models](www.biying.com)
 (or run `bash download_pretrain_model.sh`)
 
-[Meta-trained Models](https://drive.google.com/file/d/1lGcNHMRnBrjODDmt647RzMJ5cLCd4pmv/view?usp=sharing)
+[Meta-trained Models](www.biying.com)
 (or run `bash download_trained_model.sh`)
 
 ## Acknowledgment
 Our project references the codes in the following repos.
-- [Baseline++](https://github.com/Sha-Lab/FEAT)
+- [Baseline++](www.biying.com)
 
 ## Contact
 
