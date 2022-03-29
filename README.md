@@ -92,7 +92,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
 <table>
          <tr>
              <th rowspan="3" style="text-align:center;">Method</th>
-             <th colspan="4" style="text-align:center;">ResNet-1<8/th>
+             <th colspan="4" style="text-align:center;">ResNet-18</th>
              <th colspan="4" style="text-align:center;">ResNet-34</th>
          </tr>
          <tr>
