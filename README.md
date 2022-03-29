@@ -18,26 +18,49 @@ If you use this code for your research, please cite our paper.<br>
 ```
 ## Few-shot classification Results
 Experimental results on few-shot learning datasets with ResNet-12 backbone and ResNet-18 backbone. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation.
-
-
-
-**MiniImageNet Dataset**
-|  Method  |        ResNet-12            | ResNet-34 |  
-|:--------:|:------------:|:------------:|
-|  Method  | 1-Shot 5-Way | 5-Shot 5-Way |   
-| ProtoNet |     64.12    |     80.51    |
-| Good-Embed |     **66.50**    |     **82.41**    |
-|  **Meta DeepBDC**  |     **67.83**    |     **83.14**    | 
-| **STL  DeepBDC** |     **68.77**    |     **84.13**    | 
-
-**TieredImageNet Dataset**
-
-|  Setups  | 1-Shot 5-Way | 5-Shot 5-Way |   
-|:--------:|:------------:|:------------:|
-| Previous SOTA |     68.50    |     84.28    |
-| **DeepEMD-FCN** |     **72.65**    |     **86.03**    |
-|  **DeepEMD-Grid**  |     **73.13**    |     **87.08**    | 
-| **DeepEMD-Sampling** |     **74.29**    |     **86.98**    | 
+<table>
+         <tr>
+             <th rowspan="2" style="text-align:center;">Network</th>
+             <th colspan="2" style="text-align:center;">Top-1 Error</th>
+             <th colspan="2" style="text-align:center;">Top-5 Error</th>
+             <th colspan="2" style="text-align:center;">Pre-trained models</th>
+         </tr>
+         <tr>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reproduce</td>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reproduce</td>
+             <td style="text-align:center;">GoogleDrive</td>
+             <td style="text-align:center;">BaiduCloud</td>
+         </tr>
+         <tr>
+             <td style="text-align:center">fast MPN-COV-VGG-D</td>
+             <td style="text-align:center;">26.55</td>
+             <td style="text-align:center;"><b>23.98</b></td>
+             <td style="text-align:center;">8.94</td>
+             <td style="text-align:center;"><b>7.12 </b></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/open?id=1oD2QydL8VvK2Zu6Ba5Xe3gFq3to8JsrN">650.4MB</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/10DmoGbuHjI_Nsd8bEbefsA">650.4MB</a></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">fast MPN-COV-ResNet50</td>
+             <td style="text-align:center;">22.14</td>
+             <td style="text-align:center;"><b>21.71</b></td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/open?id=19TWen7p9UDyM0Ueu9Gb22NtouR109C6j">217.3MB</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/17TxANPJg_j2VyYgXV05OOQ">217.3MB</a></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">fast MPN-COV-ResNet101</td>
+             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;"><b>20.99</b></td>
+             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;"><b>5.56</b></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/open?id=1riur7v3rZ7vnrdj2UZ7EBaTKEGSccYwg">289.9MB</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1_H8MosgzPH0BBmlKw2sr5A">289.9MB</a></td>
+         </tr>
+</table>
 
 ## Prerequisites
 - Linux
