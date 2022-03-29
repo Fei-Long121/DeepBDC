@@ -1,6 +1,6 @@
 # DeepBDC in Pytorch
 <div>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/pictures/BDC.JPG" width="80%"/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/pictures/DeepBDC.jpg" width="80%"/>
 </div>
 
 
