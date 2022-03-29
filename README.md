@@ -55,13 +55,13 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
          </tr>
          <tr>
              <td style="text-align:center">Good-Embed</td>
-             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;">64.98</td>
              <td style="text-align:center;"><b>20.99</b></td>
-             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;">82.10</td>
              <td style="text-align:center;"><b>5.56</b></td>
-             <td style="text-align:center;"><b>5.6</td>
+             <td style="text-align:center;"><b>66.14</td>
              <td style="text-align:center;">8.9</td>
-             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;">82.39</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
