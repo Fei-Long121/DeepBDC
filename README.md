@@ -48,6 +48,8 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;"><b>6.13</b></td>
              <td style="text-align:center;"><a href="https://drive.google.com/open?id=19TWen7p9UDyM0Ueu9Gb22NtouR109C6j">217.3MB</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/17TxANPJg_j2VyYgXV05OOQ">217.3MB</a></td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">fast MPN-COV-ResNet101</td>
@@ -57,6 +59,8 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;"><a href="https://drive.google.com/open?id=1riur7v3rZ7vnrdj2UZ7EBaTKEGSccYwg">289.9MB</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/1_H8MosgzPH0BBmlKw2sr5A">289.9MB</a></td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
 </table>
 
