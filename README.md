@@ -44,7 +44,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
          <tr>
              <td style="text-align:center">ProtoNet</td>
              <td style="text-align:center;">22.14</td>
-             <td style="text-align:center;"><b>21.71</b></td>
+             <td style="text-align:justify;"><b>21.71</b></td>
              <td style="text-align:center;">6.22</td>
              <td style="text-align:center;"><b>6.13</b></td>
              <td style="text-align:center;"><b>4.5</td>
