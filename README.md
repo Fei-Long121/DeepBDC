@@ -176,7 +176,7 @@ cd DeepBDC
 - [tieredImageNet](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0).<br> 
   Note that all the images need to be stored into a file named "images", and the data splits are stored into "train.csv", "val.csv" and "test.csv", respectively.
 ### **For Meta DeepBDC**
-#### Pretraining
+#### Pretrain
 ```
 python train_pretrain.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --[OTHER_OPTISIONS]
 ```
@@ -185,7 +185,7 @@ For example, run
 ```
 python train_pretrain.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method meta_bdc --image_size 84 --reduce_dim 640 --train_aug --gpu 0
 ```
-#### Meta training
+#### Meta train
 ```
 python train_meta.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --n_shot [N_SHOT] --pretrain_path [PRETRAIN_MODEL_PATH]
 ```
@@ -195,7 +195,7 @@ For example, run
 python train_meta.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method meta_bdc --image_size 84 --reduce_dim 640 --train_aug --gpu 0 --n_shot 1 --pretrain_path /pretrain_pth_save_path
 ```
 
-#### Meta testing
+#### Meta test
 ```
 python test_finetuning.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --n_shot [N_SHOT] --model_path [MODEL_PATH]
 ```
@@ -206,7 +206,7 @@ python test_finetuning.py --dataset miniImagenet --data_path /data/miniImagenet 
 ```
 
 ### **For STL DeepBDC**
-#### Pretraining
+#### Pretrain
 ```
 python train_pretrain.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --[OTHER_OPTISIONS]
 ```
@@ -225,7 +225,7 @@ For example, run
 python train_meta.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method stl_bdc --image_size 84 --reduce_dim 128 --train_aug --gpu 0 --teacher_path /teacher_pth_save_path
 ```
 
-#### Meta testing
+#### Meta test
 ```
 python test_finetuning.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --n_shot [N_SHOT] --model_path [MODEL_PATH]
 ```
