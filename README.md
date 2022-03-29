@@ -20,16 +20,17 @@ If you use this code for your research, please cite our paper.<br>
 Experimental results on few-shot learning datasets with ResNet-12 backbone and ResNet-18 backbone. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation.
 <table>
          <tr>
-             <th rowspan="2" style="text-align:center;">Network</th>
-             <th colspan="2" style="text-align:center;">Top-1 Error</th>
-             <th colspan="2" style="text-align:center;">Top-5 Error</th>
-             <th colspan="2" style="text-align:center;">Pre-trained models</th>
+             <th rowspan="3" style="text-align:center;">Method</th>
+             <th colspan="4" style="text-align:center;">ResNet-12</th>
+             <th colspan="4" style="text-align:center;">ResNet-34</th>
          </tr>
          <tr>
-             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">1-shot</td>
              <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
              <td style="text-align:center;">reproduce</td>
+             <td style="text-align:center;">GoogleDrive</td>
+             <td style="text-align:center;">BaiduCloud</td>
              <td style="text-align:center;">GoogleDrive</td>
              <td style="text-align:center;">BaiduCloud</td>
          </tr>
