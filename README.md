@@ -87,6 +87,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
 </table>
+
 ### CUB
 <table>
          <tr>
