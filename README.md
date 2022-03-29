@@ -48,8 +48,8 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">80.77</td>
              <td style="text-align:center;"><b>6.13</b></td>
-             <td style="text-align:center;"><b>64.56</td>
-             <td style="text-align:center;">3.2</td>
+             <td style="text-align:center;">64.56</td>
+             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">81.16</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
@@ -59,8 +59,8 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;"><b>20.99</b></td>
              <td style="text-align:center;">82.10</td>
              <td style="text-align:center;"><b>5.56</b></td>
-             <td style="text-align:center;"><b>66.14</td>
-             <td style="text-align:center;">8.9</td>
+             <td style="text-align:center;">66.14</td>
+             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">82.39</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
@@ -71,7 +71,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;">84.46</td>
              <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">68.20</td>
-             <td style="text-align:center;">2.4</td>
+             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">84.97</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
@@ -82,7 +82,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;">85.45</td>
              <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">68.66</td>
-             <td style="text-align:center;">5.6</td>
+             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">85.47</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
