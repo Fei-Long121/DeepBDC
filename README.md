@@ -25,8 +25,8 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <th colspan="4" style="text-align:center;">ResNet-34</th>
          </tr>
          <tr>
-             <td style="text-align:center;">1-shot</td>
-             <td style="text-align:center;">reproduce</td>
+             <td colspan="2" style="text-align:center;">1-shot</td>
+             <td colspan="2" style="text-align:center;">5-shot</td>
              <td style="text-align:center;">paper</td>
              <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">GoogleDrive</td>
