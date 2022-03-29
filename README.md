@@ -16,6 +16,28 @@ If you use this code for your research, please cite our paper.<br>
   year={2022}
  }
 ```
+## Few-shot classification Results
+Experimental results on few-shot learning datasets with ResNet-12 backbone and ResNet-18 backbone. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation.
+
+
+
+**MiniImageNet Dataset**
+
+|  Setups  | 1-Shot 5-Way | 5-Shot 5-Way |   
+|:--------:|:------------:|:------------:|
+| ProtoNet |     64.12    |     80.51    |
+| Good-Embed |     **66.50**    |     **82.41**    |
+|  **Meta DeepBDC**  |     **67.83**    |     **83.14**    | 
+| **STL DeepBDC** |     **68.77**    |     **84.13**    | 
+
+**TieredImageNet Dataset**
+
+|  Setups  | 1-Shot 5-Way | 5-Shot 5-Way |   
+|:--------:|:------------:|:------------:|
+| Previous SOTA |     68.50    |     84.28    |
+| **DeepEMD-FCN** |     **72.65**    |     **86.03**    |
+|  **DeepEMD-Grid**  |     **73.13**    |     **87.08**    | 
+| **DeepEMD-Sampling** |     **74.29**    |     **86.98**    | 
 
 ## Prerequisites
 - Linux
@@ -24,12 +46,12 @@ If you use this code for your research, please cite our paper.<br>
 - GPU + CUDA CuDNN
 - pillow, torchvision, scipy, numpy
 
-## Getting Started
+## Implementation details
 ### Installation
 
 - Clone this repo:
 ```bash
-git clone https://github.com/WenbinLee/DeepBDC.git
+git clone https://github.com/longfei-png/DeepBDC.git
 cd DeepBDC
 ```
 ### Datasets
