@@ -1,7 +1,7 @@
 # DeepBDC in Pytorch
 ## Introduction
 We provide a PyTorch implementation of DeepBDC for few-shot learning:<br>
-[Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com). <br>
+   [Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com). <br>
 If you use this code for your research, please cite our paper.<br>
 ```
 @inproceedings{xie2022DeepBDC,
@@ -11,7 +11,6 @@ If you use this code for your research, please cite our paper.<br>
   year={2022}
  }
 ```
-This paper concerns an iterative matrix square root normalization network (called fast MPN-COV), which is very efficient, fit for large-scale datasets, as opposed to its predecessor If you use the code, please cite this [fast MPN-COV work](http://peihuali.org/iSQRT-COV/iSQRT-COV_bib.htm)  and its predecessor (i.e., [MPN-COV](http://peihuali.org/MPN-COV/MPN-COV_bib.htm)).
 
 ## Prerequisites
 - Linux
