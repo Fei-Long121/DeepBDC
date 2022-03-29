@@ -179,64 +179,15 @@ cd DeepBDC
 - [Cars](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0).<br>
   Note that all the images need to be stored into a file named "images", and the data splits are stored into "train.csv", "val.csv" and "test.csv", respectively.
 ### **For Meta DeepBDC**
-#### Pretrain
-```
-python train_pretrain.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --[OTHER_OPTISIONS]
-```
+1. `cp run/miniImagenet/meta_deepbdc.sh ./`
+2.  modify the dataset path in `meta_deepbdc.sh`
+3. `sh meta_deepbdc.sh`
 
-For example, run
-```
-python train_pretrain.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method meta_bdc --image_size 84 --reduce_dim 640 --train_aug --gpu 0
-```
-#### Meta train
-```
-python train_meta.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --n_shot [N_SHOT] --pretrain_path [PRETRAIN_MODEL_PATH]
-```
-
-For example, run
-```
-python train_meta.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method meta_bdc --image_size 84 --reduce_dim 640 --train_aug --gpu 0 --n_shot 1 --pretrain_path /pretrain_pth_save_path
-```
-
-#### Meta test
-```
-python test_finetuning.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --n_shot [N_SHOT] --model_path [MODEL_PATH]
-```
-
-For example, run
-```
-python test_finetuning.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method meta_bdc --image_size 84 --reduce_dim 640 --train_aug --gpu 0 --n_shot 1 --model_path /model_pth_save_path
-```
 
 ### **For STL DeepBDC**
-#### Pretrain
-```
-python train_pretrain.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --[OTHER_OPTISIONS]
-```
-
-For example, run
-```
-python train_pretrain.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method stl_bdc --image_size 84 --reduce_dim 128 --train_aug --gpu 0
-```
-#### Self distillation
-```
-python train_distillation.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --teacher_path [TEACHER_MODEL_PATH]
-```
-
-For example, run
-```
-python train_meta.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method stl_bdc --image_size 84 --reduce_dim 128 --train_aug --gpu 0 --teacher_path /teacher_pth_save_path
-```
-
-#### Meta test
-```
-python test_finetuning.py --dataset [DATASET_NAME] --data_path [DATA_PATH] --model [BACKBONE_NAME] --method [METHOD_NAME] --image_size [IMAGE_SIZE] --reduce_dim [REDUCE_DIM] --n_shot [N_SHOT] --model_path [MODEL_PATH]
-```
-
-For example, run
-```
-python test_finetuning.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method stl_bdc --image_size 84 --reduce_dim 128 --train_aug --gpu 0 --n_shot 1 --model_path /model_pth_save_path
-```
+1. `cp run/miniImagenet/stl_deepbdc.sh ./`
+2.  modify the dataset path in `stl_deepbdc.sh`
+3. `sh stl_deepbdc.sh`
 ## Download  Models
 
 
