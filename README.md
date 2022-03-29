@@ -31,13 +31,14 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td colspan="2" style="text-align:center;">5-shot</td>
          </tr>
          <tr>
-             <td style="text-align:center">fast MPN-COV-VGG-D</td>
-             <td style="text-align:center;">26.55</td>
-             <td style="text-align:center;"><b>23.98</b></td>
-             <td style="text-align:center;">8.94</td>
-             <td style="text-align:center;"><b>7.12 </b></td>
-             <td style="text-align:center;"><a href="https://drive.google.com/open?id=1oD2QydL8VvK2Zu6Ba5Xe3gFq3to8JsrN">650.4MB</a></td>
-             <td style="text-align:center;"><a href="https://pan.baidu.com/s/10DmoGbuHjI_Nsd8bEbefsA">650.4MB</a></td>
+             <td style="text-align:center">paper</td>
+             <td style="text-align:center;">reproduce</td>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reperduce</td>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reproduce</td>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reproduce</td>
          </tr>
          <tr>
              <td style="text-align:center">fast MPN-COV-ResNet50</td>
