@@ -177,7 +177,6 @@ cd DeepBDC
 - [CUB](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0).<br>
 - [Aircraft](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0).<br>
 - [Cars](https://www.dropbox.com/sh/6yd1ygtyc3yd981/AABVeEqzC08YQv4UZk7lNHvya?dl=0).<br>
-  Note that all the images need to be stored into a file named "images", and the data splits are stored into "train.csv", "val.csv" and "test.csv", respectively.
 ### **For Meta DeepBDC**
 1. `cp run/miniImagenet/meta_deepbdc.sh ./`
 2.  modify the dataset path in `meta_deepbdc.sh`
