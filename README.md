@@ -1,4 +1,4 @@
-# DeepBDC in Pytorch
+# DeepBDC for few-shot learning
 <div>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/pictures/DeepBDC.jpg" width="80%"/>
 </div>
