@@ -36,7 +36,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center">paper</td>
              <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reperduce</td>
+             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
              <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
@@ -105,7 +105,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center">paper</td>
              <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reperduce</td>
+             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
              <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
