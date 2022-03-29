@@ -7,8 +7,7 @@
 ## Introduction
 We provide a PyTorch implementation of DeepBDC for few-shot learning:<br>
  [Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com) <br>
-In this paper, we propose deep Brown Distance Covariance (DeepBDC) for few-shot classification. DeepBDC can effectively learn image representations by measuring,
-for the query and support images, the discrepancy between the joint distribution of their embedded features and product of the marginals. The core of DeepBDC is formulated as a modular and efficient layer, which can be flexibly inserted into deep networks, suitable not only for metalearning framework based on episodic training, but also for the simple transfer learning framework that relies on nonepisodic training. Extensive experiments have shown that our DeepBDC methods perform much better than the counterparts, and furthermore, set new state-of-the-art results on multiple general, fine-grained and cross-domain fewshot classification tasks. Our work shows great potential of BDC, a fundamental but overlooked technique, and encourages its future applications in deep learning.<br>
+In this paper, we propose deep Brown Distance Covariance (DeepBDC) for few-shot classification. DeepBDC can effectively learn image representations by measuring,for the query and support images, the discrepancy between the joint distribution of their embedded features and product of the marginals. The core of DeepBDC is formulated as a modular and efficient layer, which can be flexibly inserted into deep networks, suitable not only for metalearning framework based on episodic training, but also for the simple transfer learning framework that relies on nonepisodic training. Extensive experiments have shown that our DeepBDC methods perform much better than the counterparts, and furthermore, set new state-of-the-art results on multiple general, fine-grained and cross-domain fewshot classification tasks. Our work shows great potential of BDC, a fundamental but overlooked technique, and encourages its future applications in deep learning.<br>
 If you use this code for your research, please cite our paper.<br>
 ```
 @inproceedings{xie2022DeepBDC,
@@ -25,6 +24,74 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
          <tr>
              <th rowspan="3" style="text-align:center;">Method</th>
              <th colspan="4" style="text-align:center;">ResNet-12</th>
+             <th colspan="4" style="text-align:center;">ResNet-34</th>
+         </tr>
+         <tr>
+             <th colspan="2" style="text-align:center;">1-shot</th>
+             <th colspan="2" style="text-align:center;">5-shot</th>
+             <th colspan="2" style="text-align:center;">1-shot</th>
+             <th colspan="2" style="text-align:center;">5-shot</th>
+         </tr>
+         <tr>
+             <td style="text-align:center">paper</td>
+             <td style="text-align:center;">reproduce</td>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reperduce</td>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reproduce</td>
+             <td style="text-align:center;">paper</td>
+             <td style="text-align:center;">reproduce</td>
+         </tr>
+         <tr>
+             <td style="text-align:center">ProtoNet</td>
+             <td style="text-align:center;">22.14</td>
+             <td style="text-align:center;"><b>21.71</b></td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+             <td style="text-align:center;"><b>4.5</td>
+             <td style="text-align:center;">3.2</td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">Good-Embed</td>
+             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;"><b>20.99</b></td>
+             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;"><b>5.56</b></td>
+             <td style="text-align:center;"><b>5.6</td>
+             <td style="text-align:center;">8.9</td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">Meta DeepBDC</td>
+             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;"><b>20.99</b></td>
+             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;"><b>5.56</b></td>
+             <td style="text-align:center;">9.4</td>
+             <td style="text-align:center;">2.4</td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">STL DeepBDC</td>
+             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;"><b>20.99</b></td>
+             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;"><b>5.56</b></td>
+             <td style="text-align:center;">7.6</td>
+             <td style="text-align:center;">5.6</td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+         </tr>
+</table>
+### CUB
+<table>
+         <tr>
+             <th rowspan="3" style="text-align:center;">Method</th>
+             <th colspan="4" style="text-align:center;">ResNet-1<8/th>
              <th colspan="4" style="text-align:center;">ResNet-34</th>
          </tr>
          <tr>
