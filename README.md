@@ -66,24 +66,24 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
          </tr>
          <tr>
              <td style="text-align:center">Meta DeepBDC</td>
-             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;">67.34</td>
              <td style="text-align:center;"><b>20.99</b></td>
-             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;">84.46</td>
              <td style="text-align:center;"><b>5.56</b></td>
-             <td style="text-align:center;">9.4</td>
+             <td style="text-align:center;">68.20</td>
              <td style="text-align:center;">2.4</td>
-             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;">84.97</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">STL DeepBDC</td>
-             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;">67.83</td>
              <td style="text-align:center;"><b>20.99</b></td>
-             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;">85.45</td>
              <td style="text-align:center;"><b>5.56</b></td>
-             <td style="text-align:center;">7.6</td>
+             <td style="text-align:center;">68.66</td>
              <td style="text-align:center;">5.6</td>
-             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;">85.47</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
 </table>
