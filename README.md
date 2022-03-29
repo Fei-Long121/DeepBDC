@@ -234,5 +234,19 @@ For example, run
 ```
 python test_finetuning.py --dataset miniImagenet --data_path /data/miniImagenet --model ResNet12 --method stl_bdc --image_size 84 --reduce_dim 128 --train_aug --gpu 0 --n_shot 1 --model_path /model_pth_save_path
 ```
+## Download  Models
+
+
+[Pre-trained Models](https://drive.google.com/file/d/1Prn7_41NVrZbnePAlSiKjD21Jlz0LKJM/view?usp=sharing)
+(or run `bash download_pretrain_model.sh`)
+
+[Meta-trained Models](https://drive.google.com/file/d/1lGcNHMRnBrjODDmt647RzMJ5cLCd4pmv/view?usp=sharing)
+(or run `bash download_trained_model.sh`)
+
+## Acknowledgment
+Our project references the codes in the following repos.
+- [Baseline++](https://github.com/Sha-Lab/FEAT)
+
+
 
 
