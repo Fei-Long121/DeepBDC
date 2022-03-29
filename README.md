@@ -23,8 +23,8 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
 
 **MiniImageNet Dataset**
 |  Method  |        ResNet-12            | ResNet-34 |  
-|  Method  | 1-Shot 5-Way | 5-Shot 5-Way |   
 |:--------:|:------------:|:------------:|
+|  Method  | 1-Shot 5-Way | 5-Shot 5-Way |   
 | ProtoNet |     64.12    |     80.51    |
 | Good-Embed |     **66.50**    |     **82.41**    |
 |  **Meta DeepBDC**  |     **67.83**    |     **83.14**    | 
