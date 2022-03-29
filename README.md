@@ -199,6 +199,11 @@ cd DeepBDC
 Our project references the codes in the following repos.
 - [Baseline++](https://github.com/Sha-Lab/FEAT)
 
+## Contact
+
+**If you have any questions or suggestions, please contact me**
+
+`longfei121@mail.dlut.edu.cn`
 
 
 
