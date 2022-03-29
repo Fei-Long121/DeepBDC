@@ -62,6 +62,28 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone and R
              <td style="text-align:center;">6.22</td>
              <td style="text-align:center;"><b>6.13</b></td>
          </tr>
+         <tr>
+             <td style="text-align:center">Meta DeepBDC</td>
+             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;"><b>20.99</b></td>
+             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;"><b>5.56</b></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/open?id=1riur7v3rZ7vnrdj2UZ7EBaTKEGSccYwg">289.9MB</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1_H8MosgzPH0BBmlKw2sr5A">289.9MB</a></td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">STL DeepBDC</td>
+             <td style="text-align:center;">21.21</td>
+             <td style="text-align:center;"><b>20.99</b></td>
+             <td style="text-align:center;">5.68</td>
+             <td style="text-align:center;"><b>5.56</b></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/open?id=1riur7v3rZ7vnrdj2UZ7EBaTKEGSccYwg">289.9MB</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1_H8MosgzPH0BBmlKw2sr5A">289.9MB</a></td>
+             <td style="text-align:center;">6.22</td>
+             <td style="text-align:center;"><b>6.13</b></td>
+         </tr>
 </table>
 
 ## Prerequisites
