@@ -162,12 +162,12 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
 - Python 3.5
 - Pytorch 1.3
 - GPU + CUDA CuDNN
-- pillow, torchvision, scipy, numpy
+- sklearn, torchvision, scipy, numpy
 ### Installation
 
 - Clone this repo:
 ```bash
-git clone https://github.com/longfei-png/DeepBDC.git
+git clone https://github.com/Fei-Long121/DeepBDC.git
 cd DeepBDC
 ```
 ### Datasets
