@@ -1,6 +1,6 @@
 # DeepBDC in Pytorch
 ## Introduction
-We provide a PyTorch implementation of DeepBDC for few-shot learning:
+We provide a PyTorch implementation of DeepBDC for few-shot learning:<br>
 [Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com). <br>
 If you use this code for your research, please cite our paper.<br>
 ```
