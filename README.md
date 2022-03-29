@@ -1,6 +1,6 @@
 # DeepBDC in Pytorch
 <div>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/pictures/DeepBDC.JPG" width="80%"/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/pictures/BDC.JPG" width="80%"/>
 </div>
 ## Introduction
 We provide a PyTorch implementation of DeepBDC for few-shot learning:<br>
