@@ -6,7 +6,7 @@
 
 ## Introduction
 We provide a PyTorch implementation of DeepBDC for few-shot learning:<br>
-   [Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com) <br>
+ [Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](www.baidu.com) <br>
 In this paper, we propose deep Brown Distance Covariance (DeepBDC) for few-shot classification. DeepBDC
 can effectively learn image representations by measuring,
 for the query and support images, the discrepancy between
@@ -14,7 +14,7 @@ the joint distribution of their embedded features and product of the marginals. 
 the simple transfer learning framework that relies on nonepisodic training. Extensive experiments have shown that
 our DeepBDC methods perform much better than the counterparts, and furthermore, set new state-of-the-art results
 on multiple general, fine-grained and cross-domain fewshot classification tasks. Our work shows great potential
-of BDC, a fundamental but overlooked technique, and encourages its future applications in deep learning.
+of BDC, a fundamental but overlooked technique, and encourages its future applications in deep learning.<br>
 If you use this code for your research, please cite our paper.<br>
 ```
 @inproceedings{xie2022DeepBDC,
