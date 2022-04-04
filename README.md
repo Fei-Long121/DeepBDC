@@ -22,68 +22,48 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
 <table>
          <tr>
              <th rowspan="3" style="text-align:center;">Method</th>
-             <th colspan="4" style="text-align:center;">ResNet-12</th>
-             <th colspan="4" style="text-align:center;">ResNet-34</th>
+             <th colspan="2" style="text-align:center;">ResNet-12</th>
+             <th colspan="2" style="text-align:center;">ResNet-34</th>
          </tr>
          <tr>
-             <th colspan="2" style="text-align:center;">5-way-1-shot</th>
-             <th colspan="2" style="text-align:center;">5-way-5-shot</th>
-             <th colspan="2" style="text-align:center;">5-way-1-shot</th>
-             <th colspan="2" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-1-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-1-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
          </tr>
          <tr>
              <td style="text-align:center">paper</td>
-             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reproduce</td>
          </tr>
          <tr>
              <td style="text-align:center">ProtoNet</td>
              <td style="text-align:center;">62.11</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">80.77</td>
-             <td style="text-align:center;"><b>6.13</b></td>
              <td style="text-align:center;">64.56</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">81.16</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">Good-Embed</td>
              <td style="text-align:center;">64.98</td>
-             <td style="text-align:center;"><b>20.99</b></td>
              <td style="text-align:center;">82.10</td>
-             <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">66.14</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">82.39</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">Meta DeepBDC</td>
              <td style="text-align:center;">67.34</td>
-             <td style="text-align:center;"><b>20.99</b></td>
              <td style="text-align:center;">84.46</td>
-             <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">68.20</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">84.97</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">STL DeepBDC</td>
              <td style="text-align:center;">67.83</td>
-             <td style="text-align:center;"><b>20.99</b></td>
              <td style="text-align:center;">85.45</td>
-             <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">68.66</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">85.47</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
 </table>
 
@@ -91,68 +71,48 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
 <table>
          <tr>
              <th rowspan="3" style="text-align:center;">Method</th>
-             <th colspan="4" style="text-align:center;">ResNet-18</th>
-             <th colspan="4" style="text-align:center;">ResNet-34</th>
+             <th colspan="2" style="text-align:center;">ResNet-18</th>
+             <th colspan="2" style="text-align:center;">ResNet-34</th>
          </tr>
          <tr>
-             <th colspan="2" style="text-align:center;">5-way-1-shot</th>
-             <th colspan="2" style="text-align:center;">5-way-5-shot</th>
-             <th colspan="2" style="text-align:center;">5-way-1-shot</th>
-             <th colspan="2" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-1-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-1-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
          </tr>
          <tr>
              <td style="text-align:center">paper</td>
-             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reproduce</td>
              <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">reproduce</td>
          </tr>
          <tr>
              <td style="text-align:center">ProtoNet</td>
              <td style="text-align:center;">80.90</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">89.81</td>
-             <td style="text-align:center;"><b>6.13</b></td>
              <td style="text-align:center;">80.58</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">90.11</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">Good-Embed</td>
              <td style="text-align:center;">77.92</td>
-             <td style="text-align:center;"><b>20.99</b></td>
              <td style="text-align:center;">89.94</td>
-             <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">79.33</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">90.10</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">Meta DeepBDC</td>
              <td style="text-align:center;">83.55</td>
-             <td style="text-align:center;"><b>20.99</b></td>
              <td style="text-align:center;">93.82</td>
-             <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">85.25</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">94.31</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
          <tr>
              <td style="text-align:center">STL DeepBDC</td>
              <td style="text-align:center;">84.01</td>
-             <td style="text-align:center;"><b>20.99</b></td>
              <td style="text-align:center;">94.02</td>
-             <td style="text-align:center;"><b>5.56</b></td>
              <td style="text-align:center;">84.69</td>
-             <td style="text-align:center;"><b>21.71</b></td>
              <td style="text-align:center;">94.33</td>
-             <td style="text-align:center;"><b>6.13</b></td>
          </tr>
 </table>
 
