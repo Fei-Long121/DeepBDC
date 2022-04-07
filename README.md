@@ -113,7 +113,7 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
              <th colspan="1" style="text-align:center;">miniImageNet->Cars</th>
              
          </tr>
-         </tr>
+         <tr>
              <th colspan="3" style="text-align:center;">ResNet-12</th>
          </tr>
          <tr>
