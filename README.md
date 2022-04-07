@@ -110,7 +110,7 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
          </tr>
 </table>
 
-### miniImageNet->CUB
+### Cross-domain
 <table>
          <tr>
              <th rowspan="3" style="text-align:center;">Method</th>
