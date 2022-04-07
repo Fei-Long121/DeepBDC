@@ -113,14 +113,10 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
              <th colspan="1" style="text-align:center;">miniImageNet->Cars</th>
          </tr>
          <tr>
-             <th colspan="1" style="text-align:center;">ResNet-12</th>
-             <th colspan="1" style="text-align:center;">ResNet-12</th>
-             <th colspan="1" style="text-align:center;">ResNet-12</th>
+             <th colspan="3" style="text-align:center;">ResNet-12</th>
          </tr>
          <tr>
-             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
-             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
-             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="3" style="text-align:center;">5-way-5-shot</th>
          </tr>
          <tr>
              <td style="text-align:center">ProtoNet</td>
@@ -136,9 +132,9 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
          </tr>
          <tr>
              <td style="text-align:center">Meta DeepBDC</td>
-             <td style="text-align:center;">83.55</td>
-             <td style="text-align:center;">80.90</td>
-             <td style="text-align:center;">80.90</td>
+             <td style="text-align:center;">77.87</td>
+             <td style="text-align:center;">68.67</td>
+             <td style="text-align:center;">54.61</td>
          </tr>
          <tr>
              <td style="text-align:center">STL DeepBDC</td>
