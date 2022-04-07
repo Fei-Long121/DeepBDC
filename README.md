@@ -21,7 +21,7 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
 ### miniImageNet
 <table>
          <tr>
-             <th rowspan="3" style="text-align:center;">Method</th>
+             <th rowspan="2" style="text-align:center;">Method</th>
              <th colspan="2" style="text-align:center;">ResNet-12</th>
              <th colspan="2" style="text-align:center;">ResNet-34</th>
          </tr>
@@ -30,12 +30,6 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
              <th colspan="1" style="text-align:center;">5-way-5-shot</th>
              <th colspan="1" style="text-align:center;">5-way-1-shot</th>
              <th colspan="1" style="text-align:center;">5-way-5-shot</th>
-         </tr>
-         <tr>
-             <td style="text-align:center">paper</td>
-             <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">paper</td>
          </tr>
          <tr>
              <td style="text-align:center">ProtoNet</td>
