@@ -18,7 +18,7 @@ In this paper, we propose deep Brown Distance Covariance (DeepBDC) for few-shot 
 If you use this code for your research, please cite our paper.<br>
 ## Few-shot classification Results
 Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResNet-34. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation.More details about the experiments can be seen in the paper, and we will update some of our results on other datasets in the future.
-### MiniImageNet
+### miniImageNet
 <table>
          <tr>
              <th rowspan="3" style="text-align:center;">Method</th>
@@ -70,7 +70,7 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
 ### CUB
 <table>
          <tr>
-             <th rowspan="3" style="text-align:center;">Method</th>
+             <th rowspan="2" style="text-align:center;">Method</th>
              <th colspan="2" style="text-align:center;">ResNet-18</th>
              <th colspan="2" style="text-align:center;">ResNet-34</th>
          </tr>
@@ -79,12 +79,6 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
              <th colspan="1" style="text-align:center;">5-way-5-shot</th>
              <th colspan="1" style="text-align:center;">5-way-1-shot</th>
              <th colspan="1" style="text-align:center;">5-way-5-shot</th>
-         </tr>
-         <tr>
-             <td style="text-align:center">paper</td>
-             <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">paper</td>
-             <td style="text-align:center;">paper</td>
          </tr>
          <tr>
              <td style="text-align:center">ProtoNet</td>
@@ -116,6 +110,47 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
          </tr>
 </table>
 
+### miniImageNet->CUB
+<table>
+         <tr>
+             <th rowspan="3" style="text-align:center;">Method</th>
+             <th colspan="1" style="text-align:center;">miniImageNet->CUB</th>
+             <th colspan="1" style="text-align:center;">miniImageNet->Aircraft</th>
+             <th colspan="1" style="text-align:center;">miniImageNet->Cars</th>
+             
+         </tr>
+         </tr>
+             <th colspan="3" style="text-align:center;">ResNet-12</th>
+         </tr>
+         <tr>
+             <th colspan="3" style="text-align:center;">5-way-5-shot</th>
+         </tr>
+         <tr>
+             <td style="text-align:center">ProtoNet</td>
+             <td style="text-align:center;">67.19</td>
+             <td style="text-align:center;">55.96</td>
+             <td style="text-align:center;">46.30</td>
+         </tr>
+         <tr>
+             <td style="text-align:center">Good-Embed</td>
+             <td style="text-align:center;">67.43</td>
+             <td style="text-align:center;">58.95</td>
+             <td style="text-align:center;">50.18</td>
+         </tr>
+         <tr>
+             <td style="text-align:center">Meta DeepBDC</td>
+             <td style="text-align:center;">83.55</td>
+             <td style="text-align:center;">80.90</td>
+             <td style="text-align:center;">80.90</td>
+         </tr>
+         <tr>
+             <td style="text-align:center">STL DeepBDC</td>
+             <td style="text-align:center;">80.16</td>
+             <td style="text-align:center;">69.07</td>
+             <td style="text-align:center;">58.09</td>
+         </tr>
+</table>
+
 ## Implementation details
 ### Prerequisites
 - Linux
@@ -136,16 +171,16 @@ cd DeepBDC
 - [CUB](www.biying.com)<br>
 - [Aircraft](www.biying.com)<br>
 - [Cars](www.biying.com)<br>
-### **For Meta DeepBDC**
-1. `cp run/miniImagenet/meta_deepbdc.sh ./`
-2.  modify the dataset path in `meta_deepbdc.sh`
-3. `sh meta_deepbdc.sh`
+### **For Meta DeepBDC on general object recognition**
+1. `cd scripts/miniImagenet/run_meta_deepbdc`
+2.  modify the dataset path in `run_pretrain.sh`、`run_metatrain.sh` and `run_test.sh`
+3. `bash run_all.sh`
 
 
-### **For STL DeepBDC**
-1. `cp run/miniImagenet/stl_deepbdc.sh ./`
-2.  modify the dataset path in `stl_deepbdc.sh`
-3. `sh stl_deepbdc.sh`
+### **For STL DeepBDC on general object recognition**
+1. `cd scripts/miniImagenet/run_stl_deepbdc`
+2.  modify the dataset path in `run_pretrain.sh`、`run_metatrain.sh` and `run_test.sh`
+3. `bash run_all.sh`
 ## Download  Models
 
 
