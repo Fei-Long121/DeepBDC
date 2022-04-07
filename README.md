@@ -114,10 +114,14 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
              
          </tr>
          <tr>
-             <th colspan="3" style="text-align:center;">ResNet-12</th>
+             <th colspan="1" style="text-align:center;">ResNet-12</th>
+             <th colspan="1" style="text-align:center;">ResNet-12</th>
+             <th colspan="1" style="text-align:center;">ResNet-12</th>
          </tr>
          <tr>
-             <th colspan="3" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
          </tr>
          <tr>
              <td style="text-align:center">ProtoNet</td>
