@@ -1,6 +1,6 @@
 # DeepBDC for few-shot learning
 <div>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/pictures/DeepBDC/Illustration.gif" width="80%"/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/DeepBDC/Illustration.gif" width="80%"/>
 </div>
 
 
