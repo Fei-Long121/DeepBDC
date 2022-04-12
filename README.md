@@ -147,10 +147,10 @@ Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResN
 ## Implementation details
 ### Prerequisites
 - Linux
-- Python 3.5
-- Pytorch 1.3
-- GPU + CUDA CuDNN
-- sklearn, torchvision, scipy, numpy
+- Python 3.8.3
+- torch 1.7.1
+- GPU + CUDA11.0 CuDNN
+- sklearn1.0.1,  pillow8.0.0, numpy1.19.2
 ### Installation
 
 - Clone this repo:
@@ -185,13 +185,14 @@ cd DeepBDC
 
 ## Acknowledgment
 Our project references the codes in the following repos.
-- [Baseline++](www.biying.com)
+- [Baseline++](https://github.com/wyharveychen/CloserLookFewShot)
 
 ## Contact
 
-**If you have any questions or suggestions, please contact me**
+**If you have any questions or suggestions, please contact us**
 
 `longfei121@mail.dlut.edu.cn`
+`ljm_vlg@mail.dlut.edu.cn`
 
 
 
