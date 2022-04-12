@@ -191,7 +191,7 @@ Our project references the codes in the following repos.
 
 **If you have any questions or suggestions, please contact us**
 
-`longfei121@mail.dlut.edu.cn`
+`longfei121@mail.dlut.edu.cn`<br>
 `ljm_vlg@mail.dlut.edu.cn`
 
 
