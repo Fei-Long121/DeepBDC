@@ -5,7 +5,7 @@
 
 
 ## Introduction
-In this repo, we provide the implementation of the following paper:"Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification"   [Project.](http://peihuali.org/DeepBDC/index.html),[Paper.](https://arxiv.org/pdf/2204.04567.pdf)
+In this repo, we provide the implementation of the following paper:"Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification"   [Project.](http://peihuali.org/DeepBDC/index.html), [Paper.](https://arxiv.org/pdf/2204.04567.pdf)
  In this paper, we propose deep Brown Distance Covariance (DeepBDC) for few-shot classification. DeepBDC can effectively learn image representations by measuring, for the query and support images, the discrepancy between the joint distribution of their embedded features and product of the marginals. The core of DeepBDC is formulated as a modular and efficient layer, which can be flexibly inserted into deep networks, suitable not only for meta-learning framework based on episodic training, but also for the simple transfer learning framework of pretraining plus linear classifier.<br>
 ```
 @inproceedings{DeepBDC-CVPR2022,
@@ -144,7 +144,10 @@ Experimental results on miniImageNet and CUB with ResNet-12 , ResNet-18 and ResN
              <td style="text-align:center;">58.09</td>
          </tr>
 </table>
-
+References
+[BDC] G. J. Szekely and M. L. Rizzo. Brownian  istance covariance. Annals of Applied Statistics, 3:1236–1265, 2009.
+[ProtoNet] Jake Snell, Kevin Swersky, and Richard Zemel.  Prototypical networks for few-shot learning. In NIPS, 2017.
+[Good-Embed] Y. Tian, Y. Wang, D. Krishnan, J. B. Tenenbaum, and P. Isola. Rethinking few-shot image classification: a good embedding is all you need? In ECCV, 2020. 
 ## Implementation details
 ### Prerequisites
 - Linux
@@ -184,7 +187,7 @@ cd DeepBDC
 [Meta-trained Models](www.biying.com)
 (or run `bash download_trained_model.sh`)
 
-## Acknowledgment
+## Acknowledgments
 Our project references the codes in the following repos.
 - [Baseline++](https://github.com/wyharveychen/CloserLookFewShot)
 
@@ -192,8 +195,8 @@ Our project references the codes in the following repos.
 
 **If you have any questions or suggestions, please contact us**
 
-`longfei121@mail.dlut.edu.cn`<br>
-`ljm_vlg@mail.dlut.edu.cn`
+`Fei Long(longfei121@mail.dlut.edu.cn)`<br>
+`Jiaming Lv(ljm_vlg@mail.dlut.edu.cn)`
 
 
 
