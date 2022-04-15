@@ -144,10 +144,10 @@ Experimental results on miniImageNet and CUB with ResNet-12 , ResNet-18 and ResN
              <td style="text-align:center;">58.09</td>
          </tr>
 </table>
-References
-[BDC] G. J. Szekely and M. L. Rizzo. Brownian  istance covariance. Annals of Applied Statistics, 3:1236–1265, 2009.
-[ProtoNet] Jake Snell, Kevin Swersky, and Richard Zemel.  Prototypical networks for few-shot learning. In NIPS, 2017.
-[Good-Embed] Y. Tian, Y. Wang, D. Krishnan, J. B. Tenenbaum, and P. Isola. Rethinking few-shot image classification: a good embedding is all you need? In ECCV, 2020. 
+## References
+[BDC] G. J. Szekely and M. L. Rizzo. Brownian  istance covariance. Annals of Applied Statistics, 3:1236–1265, 2009.<br>
+[ProtoNet] Jake Snell, Kevin Swersky, and Richard Zemel.  Prototypical networks for few-shot learning. In NIPS, 2017.<br>
+[Good-Embed] Y. Tian, Y. Wang, D. Krishnan, J. B. Tenenbaum, and P. Isola. Rethinking few-shot image classification: a good embedding is all you need? In ECCV, 2020.<br> 
 ## Implementation details
 ### Prerequisites
 - Linux
