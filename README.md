@@ -190,8 +190,9 @@ cd DeepBDC
 (or run `bash download_trained_model.sh`)
 
 ## Acknowledgments
-Our project references the codes in the following repos.
-- [Baseline++](https://github.com/wyharveychen/CloserLookFewShot)
+Our code builds upon the the following code publicly available:
+- [CloserLookFewShot](https://github.com/wyharveychen/CloserLookFewShot)
+- [RFS](https://github.com/WangYueFt/rfs/)
 
 ## Contact
 
