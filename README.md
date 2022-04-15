@@ -1,6 +1,6 @@
 # DeepBDC for few-shot learning
 <div>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/DeepBDC/Illustration.gif" width="80%"/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/DeepBDC/illustration.gif" width="80%"/>
 </div>
 
 
@@ -8,13 +8,14 @@
 We provide a PyTorch implementation of DeepBDC for few-shot learning:[Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification.](https://arxiv.org/pdf/2204.04567.pdf)
 In this paper, we propose deep Brown Distance Covariance (DeepBDC) for few-shot classification. DeepBDC can effectively learn image representations by measuring,for the query and support images, the discrepancy between the joint distribution of their embedded features and product of the marginals. The core of DeepBDC is formulated as a modular and efficient layer, which can be flexibly inserted into deep networks, suitable not only for metalearning framework based on episodic training, but also for the simple transfer learning framework that relies on nonepisodic training.<br>
 ```
-@inproceedings{xie2022DeepBDC,
+@inproceedings{DeepBDC-CVPR2022,
   title={Joint Distribution Matters: Deep Brownian Distance Covariance for Few-Shot Classification},
-  author={Xie, Jiangtao and Long, Fei and Lv, Jiaming and Wang, Qilong and Li, Peihua}, 
+  author={Jiangtao Xie and Fei Long and Jiaming Lv and Qilong Wang and Peihua Li}, 
   booktitle={CVPR},
   year={2022}
  }
 ```
+
 If you use this code for your research, please cite our paper.<br>
 ## Few-shot classification Results
 Experimental results on CUB and MiniImageNet with ResNet-12 , ResNet-18 and ResNet-34. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation.More details about the experiments can be seen in the paper, and we will update some of our results on other datasets in the future.
