@@ -43,16 +43,16 @@ Experimental results on miniImageNet and CUB and cross-domain datasets. We repor
              <td style="text-align:center">ProtoNet</td>
              <td style="text-align:center;">62.11±0.44</td>
              <td style="text-align:center;">80.77±0.30</td>
-             <td style="text-align:center;"><a href="www.biying.com">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1ngzuWjB4btPzGqIX_dr24iUwa0fDWk6p?usp=sharing">Download</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/1eQJnkxkH0HgB1cBiU4kjuA?pwd=an94">Download</a></td>
-             <td style="text-align:center;"><a href="www.biying.com">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1GaBoQh4i9kF13jEXRwORmpXTpsDlcVOE?usp=sharing">Download</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/16EV3jsOsEnTdl3DYtLCaMw?pwd=sw8j">Download</a></td>
          </tr>
          <tr>
              <td style="text-align:center">Good-Embed</td>
              <td style="text-align:center;">64.98±0.44</td>
              <td style="text-align:center;">82.10±0.30</td>
-             <td style="text-align:center;"><a href="www.biying.com">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1C2uIs1t_QJBcol2TKjlwTPAr78IfRZRn?usp=sharing">Download</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/1z_YCzvhHMLzGPVkxWGqWoA?pwd=8cyz">Download</a></td>
              <td colspan="2" style="text-align:center;">N/A</td>
          </tr>
@@ -60,16 +60,16 @@ Experimental results on miniImageNet and CUB and cross-domain datasets. We repor
              <td style="text-align:center">Meta DeepBDC</td>
              <td style="text-align:center;">67.34±0.43</td>
              <td style="text-align:center;">84.46±0.28</td>
-             <td style="text-align:center;"><a href="www.biying.com">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/10Ej_xZeO_M-aMQkKpYcawAQ0BKV3b8SU?usp=sharing">Download</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/1encoBx8lJrRTkptBc4O3XQ?pwd=3ee0">Download</a></td>
-             <td style="text-align:center;"><a href="www.biying.com">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/14_2dqvGSPeQ9sqLjXWpi58YVwfWqufMq?usp=sharing">Download</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/1vuh08yt02CX2TXnV332frA?pwd=abzh">Download</a></td>
          </tr>
          <tr>
              <td style="text-align:center">STL DeepBDC</td>
              <td style="text-align:center;">67.83±0.43</td>
              <td style="text-align:center;">85.45±0.29</td>
-             <td style="text-align:center;"><a href="www.biying.com">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1mxacPRdvNayZDrhyprrgOWwyRXRdhdu1?usp=sharing">Download</a></td>
              <td style="text-align:center;"><a href="https://pan.baidu.com/s/10Ft7xvbQQCII3OsL0jFkyw?pwd=ls0a">Download</a></td>
              <td colspan="2" style="text-align:center;">N/A</td>
          </tr>
