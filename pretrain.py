@@ -99,7 +99,7 @@ if __name__ == '__main__':
     parser.add_argument('--val', default='meta', choices=['meta', 'last'], help='validation method')
     parser.add_argument('--val_n_episode', default=1000, type=int, help='number of episodes in meta validation')
     parser.add_argument('--val_n_way', default=5, type=int, help='number of  classes to classify in meta validation')
-    parser.add_argument('--n_shot', default=5, type=int, help='number of labeled data in each class, same as n_support during meta validation')
+    parser.add_argument('--n_shot', default=1, type=int, help='number of labeled data in each class, same as n_support during meta validation')
     parser.add_argument('--n_query', default=15, type=int, help='number of unlabeled data in each class during meta validation')
 
     parser.add_argument('--extra_dir', default='', help='recording additional information')
