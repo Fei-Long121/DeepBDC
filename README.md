@@ -22,7 +22,7 @@ In this repo, we provide the implementation of the following paper:<br>
 
 
 ## Few-shot classification Results
-Experimental results on miniImageNet and CUB and cross-domain datasets. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation. More details on the experiments can be seen in the paper.
+Experimental results on miniImageNet and CUB. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation. More details on the experiments can be seen in the paper.
 ### miniImageNet
 <table>
          <tr>
