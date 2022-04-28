@@ -167,7 +167,7 @@ cd DeepBDC
 
 ### **For STL DeepBDC on general object recognition**
 1. `cd scripts/mini_imagenet/run_stl_deepbdc`
-2.  modify the dataset path in `run_pretrain.sh`, `run_metatrain.sh` and `run_test.sh`
+2.  modify the dataset path in `run_pretrain.sh`, `run_distillation.sh` and `run_test.sh`
 3. `bash run.sh`
 
 ## Acknowledgments
