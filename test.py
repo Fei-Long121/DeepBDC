@@ -17,7 +17,7 @@ import tqdm
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--image_size', default=84, type=int, choices=[84, 224])
-parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub','aircraft','car'])
+parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub'])
 parser.add_argument('--data_path', type=str)
 parser.add_argument('--model', default='ResNet12', choices=['ResNet12', 'ResNet18'])
 parser.add_argument('--method', default='stl_deepbdc', choices=['meta_deepbdc', 'stl_deepbdc', 'protonet', 'good_embed'])
