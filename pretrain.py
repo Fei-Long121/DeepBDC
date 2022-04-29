@@ -88,8 +88,8 @@ if __name__ == '__main__':
     parser.add_argument('--epoch', default=150, type=int, help='stopping epoch')
     parser.add_argument('--gpu', default='0', help='gpu id')
 
-    parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub','cross_domain_cub', 'cross_domain_aircraft', 'cross_domain_car'])
-    parser.add_argument('--val_dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub','aircraft','car'])
+    parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub'])
+    parser.add_argument('--val_dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub'])
 
     parser.add_argument('--data_path', type=str, help='dataset path')
     parser.add_argument('--val_data_path', type=str, help='validation dataset path')
@@ -114,9 +114,8 @@ if __name__ == '__main__':
     num_gpu = set_gpu(params)
     set_seed(params.seed)
 
-    if params.dataset not in ['cross_domain_cub', 'cross_domain_aircraft', 'cross_domain_car']:
-        params.val_dataset = params.dataset
-        params.val_data_path = params.data_path
+    params.val_dataset = params.dataset
+    params.val_data_path = params.data_path
 
     if params.val == 'last':
         val_file = None
@@ -133,18 +132,6 @@ if __name__ == '__main__':
     elif params.dataset == 'tiered_imagenet':
         base_file = 'train'
         params.num_classes = 351
-    elif params.dataset == 'cross_domain_cub':
-        base_file = 'train, val, test'
-        val_file = 'val'
-        params.num_classes = 100
-    elif params.dataset == 'cross_domain_aircraft':
-        base_file = 'train, val, test'
-        val_file = 'val'
-        params.num_classes = 100
-    elif params.dataset == 'cross_domain_car':
-        base_file = 'train, val, test'
-        val_file = 'val'
-        params.num_classes = 100
     else:
         ValueError('dataset error')
 
