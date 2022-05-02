@@ -1,3 +1,4 @@
+import json
 import numpy as np
 import torch
 import torch.nn as nn
@@ -17,19 +18,16 @@ import tqdm
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--image_size', default=84, type=int, choices=[84, 224])
-parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub','aircraft','car'])
+parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet', 'tiered_imagenet', 'cub'])
 parser.add_argument('--data_path', type=str)
 parser.add_argument('--model', default='ResNet12', choices=['ResNet12', 'ResNet18'])
 parser.add_argument('--method', default='stl_deepbdc', choices=['meta_deepbdc', 'stl_deepbdc', 'protonet', 'good_embed'])
 
-parser.add_argument('--test_n_way', default=5, type=int,
-                    help='number of classes used for testing (validation)')
-parser.add_argument('--n_shot', default=5, type=int,
-                    help='number of labeled data in each class, same as n_support')
+parser.add_argument('--test_n_way', default=5, type=int, help='number of classes used for testing (validation)')
+parser.add_argument('--n_shot', default=5, type=int, help='number of labeled data in each class, same as n_support')
 parser.add_argument('--n_query', default=15, type=int, help='number of unlabeled data in each class during meta validation')
 
-parser.add_argument('--test_n_episode', default=10000, type=int,
-                    help='number of episodes in test')
+parser.add_argument('--test_n_episode', default=2000, type=int, help='number of episodes in test')
 parser.add_argument('--model_path', default='', help='meta-trained or pre-trained model .tar file path')
 parser.add_argument('--test_task_nums', default=5, type=int, help='test numbers')
 parser.add_argument('--gpu', default='0', help='gpu id')
@@ -39,12 +37,18 @@ parser.add_argument('--reduce_dim', default=640, type=int, help='the output dime
 parser.add_argument('--dropout_rate', default=0.5, type=float, help='dropout rate for pretrain and distillation')
 
 params = parser.parse_args()
-
 num_gpu = set_gpu(params)
-novel_file = 'test'
+
+json_file_read = False
+if params.dataset == 'cub':
+    novel_file = 'novel.json'
+    json_file_read = True
+else:
+    novel_file = 'test'
+
 
 novel_few_shot_params = dict(n_way=params.test_n_way, n_support=params.n_shot)
-novel_datamgr = SetDataManager(params.data_path, params.image_size, n_query=params.n_query, n_episode=params.test_n_episode, dataset=params.dataset,  **novel_few_shot_params)
+novel_datamgr = SetDataManager(params.data_path, params.image_size, n_query=params.n_query, n_episode=params.test_n_episode, json_read=json_file_read,  **novel_few_shot_params)
 novel_loader = novel_datamgr.get_data_loader(novel_file, aug=False)
 
 if params.method == 'protonet':

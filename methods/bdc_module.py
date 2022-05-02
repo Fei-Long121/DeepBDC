@@ -15,13 +15,11 @@ import torch
 import torch.nn as nn
 
 class BDC(nn.Module):
-    def __init__(self, is_vec=True, input_dim=640, dimension_reduction=None, conv_init_a=0, conv_init_mode='fan_out', activate='relu'):
+    def __init__(self, is_vec=True, input_dim=640, dimension_reduction=None, activate='relu'):
         super(BDC, self).__init__()
         self.is_vec = is_vec
         self.dr = dimension_reduction
         self.activate = activate
-        self.conv_init_mode = conv_init_mode
-        self.conv_init_a = conv_init_a
         self.input_dim = input_dim[0]
         if self.dr is not None and self.dr != self.input_dim:
             if activate == 'relu':
@@ -49,7 +47,7 @@ class BDC(nn.Module):
     def _init_weight(self):
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
-                nn.init.kaiming_normal_(m.weight, a=self.conv_init_a, mode=self.conv_init_mode, nonlinearity='leaky_relu')
+                nn.init.kaiming_normal_(m.weight, a=0, mode='fan_out', nonlinearity='leaky_relu')
             elif isinstance(m, nn.BatchNorm2d):
                 nn.init.constant_(m.weight, 1)
                 nn.init.constant_(m.bias, 0)

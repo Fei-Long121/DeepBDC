@@ -81,10 +81,8 @@ if __name__ == '__main__':
     parser.add_argument('--gpu', default='0', help='gpu id')
 
     parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub'])
-    parser.add_argument('--val_dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub'])
-
     parser.add_argument('--data_path', type=str, help='dataset path')
-    parser.add_argument('--val_data_path', type=str, help='validation dataset path')
+
     parser.add_argument('--model', default='ResNet12', choices=['ResNet12','ResNet18'])
     parser.add_argument('--method', default='meta_deepbdc', choices=['meta_deepbdc', 'protonet'])
 
@@ -92,10 +90,8 @@ if __name__ == '__main__':
     parser.add_argument('--val_n_episode', default=300, type=int, help='number of episodes in meta val')
     parser.add_argument('--train_n_way', default=5, type=int, help='number of classes used for meta train')
     parser.add_argument('--val_n_way', default=5, type=int, help='number of classes used for meta val')
-    parser.add_argument('--n_shot', default=5, type=int,
-                        help='number of labeled data in each class, same as n_support')
-    parser.add_argument('--n_query', default=16, type=int,
-                        help='number of unlabeled data in each class')
+    parser.add_argument('--n_shot', default=5, type=int, help='number of labeled data in each class, same as n_support')
+    parser.add_argument('--n_query', default=16, type=int, help='number of unlabeled data in each class')
 
     parser.add_argument('--extra_dir', default='', help='record additional information')
 
@@ -107,20 +103,19 @@ if __name__ == '__main__':
     parser.add_argument('--reduce_dim', default=640, type=int, help='the output dimension of BDC dimensionality reduction layer')
     params = parser.parse_args()
 
-    params.val_dataset = params.dataset
-    params.val_data_path = params.data_path
-
     num_gpu = set_gpu(params)
     set_seed(params.seed)
 
+    json_file_read = False
     if params.dataset == 'mini_imagenet':
         base_file = 'train'
         val_file = 'val'
         params.num_classes = 64
     elif params.dataset == 'cub':
-        base_file = 'train'
-        val_file = 'val'
-        params.num_classes = 100
+        base_file = 'base.json'
+        val_file = 'val.json'
+        json_file_read = True
+        params.num_classes = 200
     elif params.dataset == 'tiered_imagenet':
         base_file = 'train'
         val_file = 'val'
@@ -129,11 +124,11 @@ if __name__ == '__main__':
         ValueError('dataset error')
 
     train_few_shot_params = dict(n_way=params.train_n_way, n_support=params.n_shot)
-    base_datamgr = SetDataManager(params.data_path, params.image_size, n_query=params.n_query, n_episode=params.train_n_episode, dataset=params.dataset, **train_few_shot_params)
+    base_datamgr = SetDataManager(params.data_path, params.image_size, n_query=params.n_query, n_episode=params.train_n_episode, json_read=json_file_read, **train_few_shot_params)
     base_loader = base_datamgr.get_data_loader(base_file, aug=True)
 
     test_few_shot_params = dict(n_way=params.val_n_way, n_support=params.n_shot)
-    val_datamgr = SetDataManager(params.val_data_path, params.image_size, n_query=params.n_query, n_episode=params.val_n_episode,dataset=params.val_dataset, **test_few_shot_params)
+    val_datamgr = SetDataManager(params.data_path, params.image_size, n_query=params.n_query, n_episode=params.val_n_episode, json_read=json_file_read, **test_few_shot_params)
     val_loader = val_datamgr.get_data_loader(val_file, aug=False)
     # a batch for SetDataManager: a [n_way, n_support + n_query, dim, w, h] tensor
 

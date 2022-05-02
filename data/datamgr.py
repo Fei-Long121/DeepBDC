@@ -4,7 +4,7 @@ import torch
 from PIL import Image
 import numpy as np
 import torchvision.transforms as transforms
-from data.dataset import SimpleDataset, SetDataset, EpisodicBatchSampler
+from data.dataset import SetDataset_JSON, SimpleDataset, SetDataset, EpisodicBatchSampler, SimpleDataset_JSON
 from abc import abstractmethod
 
 
@@ -44,16 +44,19 @@ class DataManager:
 
 
 class SimpleDataManager(DataManager):
-    def __init__(self, data_path, image_size, batch_size, dataset):
+    def __init__(self, data_path, image_size, batch_size, json_read=False):
         super(SimpleDataManager, self).__init__()
         self.batch_size = batch_size
         self.data_path = data_path
         self.trans_loader = TransformLoader(image_size)
-        self.dataset = dataset
+        self.json_read = json_read
 
     def get_data_loader(self, data_file, aug):  # parameters that would change on train/val set
         transform = self.trans_loader.get_composed_transform(aug)
-        dataset = SimpleDataset(self.data_path, data_file, transform)
+        if self.json_read:
+            dataset = SimpleDataset_JSON(self.data_path, data_file, transform)
+        else:
+            dataset = SimpleDataset(self.data_path, data_file, transform)
         data_loader_params = dict(batch_size=self.batch_size, shuffle=True, num_workers=12, pin_memory=True)
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)
 
@@ -61,20 +64,23 @@ class SimpleDataManager(DataManager):
 
 
 class SetDataManager(DataManager):
-    def __init__(self, data_path, image_size, n_way, n_support, n_query, n_episode, dataset):
+    def __init__(self, data_path, image_size, n_way, n_support, n_query, n_episode, json_read=False):
         super(SetDataManager, self).__init__()
         self.image_size = image_size
         self.n_way = n_way
         self.batch_size = n_support + n_query
         self.n_episode = n_episode
         self.data_path = data_path
-        self.dataset = dataset
+        self.json_read = json_read
 
         self.trans_loader = TransformLoader(image_size)
 
     def get_data_loader(self, data_file, aug):  # parameters that would change on train/val set
         transform = self.trans_loader.get_composed_transform(aug)
-        dataset = SetDataset(self.data_path, data_file, self.batch_size, transform)
+        if self.json_read:
+            dataset = SetDataset_JSON(self.data_path, data_file, self.batch_size, transform)
+        else:
+            dataset = SetDataset(self.data_path, data_file, self.batch_size, transform)
         sampler = EpisodicBatchSampler(len(dataset), self.n_way, self.n_episode)
         data_loader_params = dict(batch_sampler=sampler, num_workers=12, pin_memory=True)
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)

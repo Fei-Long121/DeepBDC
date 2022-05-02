@@ -22,7 +22,7 @@ In this repo, we provide the implementation of the following paper:<br>
 
 
 ## Few-shot classification Results
-Experimental results on miniImageNet and CUB. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation. More details on the experiments can be seen in the paper.
+Experimental results on miniImageNet and CUB and cross-domain datasets. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation. More details on the experiments can be seen in the paper.
 ### miniImageNet
 <table>
          <tr>
@@ -97,34 +97,34 @@ Experimental results on miniImageNet and CUB. We report average results with 2,0
              <td style="text-align:center">ProtoNet</td>
              <td style="text-align:center;">80.90±0.43</td>
              <td style="text-align:center;">89.81±0.23</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
+             <td style="text-align:center;"><a href="https://drive.google.com/file/d/1rpNH9iAI10KEGacLn55gY3PYoBFDg94W/view?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1CMfyUtpkkTTDF4kT5lJ7Hw?pwd=1din">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1xPYoVtv0sPa1QY2eq9bmJNGOhqRSMHGD?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/19Y8IaoWNHGgYcjrLd9Mvsw?pwd=cl0t">Download</a></td>
          </tr>
          <tr>
              <td style="text-align:center">Good-Embed</td>
              <td style="text-align:center;">77.92±0.46</td>
              <td style="text-align:center;">89.94±0.26</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
+             <td style="text-align:center;"><a href="https://drive.google.com/file/d/15Cd-bodJUQHH7rB3x4JohA723lN9CuDq/view?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1y85JKAaQaEE8sPTQ6RNqEw?pwd=00qf">Download</a></td>
              <td colspan="2" style="text-align:center;">N/A</td>
          </tr>
          <tr>
              <td style="text-align:center">Meta DeepBDC</td>
              <td style="text-align:center;">83.55±0.40</td>
              <td style="text-align:center;">93.82±0.17</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
+             <td style="text-align:center;"><a href="https://drive.google.com/file/d/15rXrL2DLw0d5nO2CfGOLNbqYaKLcasAG/view?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1FKRt65qaM2JlTBfsG9l64w?pwd=e3cw">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1jnK0O4BNfrZnZl9CG3nFeJfJZHJdqVeH?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1yoqXwsqU4T2DK-MgJ_z1JQ?pwd=xro5">Download</a></td>
          </tr>
          <tr>
              <td style="text-align:center">STL DeepBDC</td>
              <td style="text-align:center;">84.01±0.42</td>
              <td style="text-align:center;">94.02±0.24</td>
-             <td style="text-align:center;">TO DO</td>
-             <td style="text-align:center;">TO DO</td>
+             <td style="text-align:center;"><a href="https://drive.google.com/file/d/1ZN6DXGPREHNIQJSGeLdfQUWJb90Grjck/view?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/15dXPW3pcs2BaaC0fBtgrTA?pwd=18nw">Download</a></td>
              <td colspan="2" style="text-align:center;">N/A</td>
          </tr>
 </table>
@@ -139,8 +139,8 @@ Experimental results on miniImageNet and CUB. We report average results with 2,0
 ## Implementation details
 ### Datasets
 - miniImageNet: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)
+- CUB: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)
 - tieredImageNet
-- CUB
 - Aircraft
 - Cars
 
@@ -167,7 +167,7 @@ cd DeepBDC
 
 ### **For STL DeepBDC on general object recognition**
 1. `cd scripts/mini_imagenet/run_stl_deepbdc`
-2.  modify the dataset path in `run_pretrain.sh`, `run_distillation.sh` and `run_test.sh`
+2.  modify the dataset path in `run_pretrain.sh`, `run_metatrain.sh` and `run_test.sh`
 3. `bash run.sh`
 
 ## Acknowledgments

@@ -89,10 +89,8 @@ if __name__ == '__main__':
     parser.add_argument('--gpu', default='0', help='gpu id')
 
     parser.add_argument('--dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub'])
-    parser.add_argument('--val_dataset', default='mini_imagenet', choices=['mini_imagenet','tiered_imagenet','cub'])
-
     parser.add_argument('--data_path', type=str, help='dataset path')
-    parser.add_argument('--val_data_path', type=str, help='validation dataset path')
+
     parser.add_argument('--model', default='ResNet12', choices=['ResNet12', 'ResNet18'])
     parser.add_argument('--method', default='stl_deepbdc', choices=['meta_deepbdc', 'stl_deepbdc', 'protonet', 'good_embed'])
     
@@ -114,33 +112,33 @@ if __name__ == '__main__':
     num_gpu = set_gpu(params)
     set_seed(params.seed)
 
-    params.val_dataset = params.dataset
-    params.val_data_path = params.data_path
 
     if params.val == 'last':
         val_file = None
     elif params.val == 'meta':
         val_file = 'val'
 
+    json_file_read = False
     if params.dataset == 'mini_imagenet':
         base_file = 'train'
         params.num_classes = 64
     elif params.dataset == 'cub':
-        base_file = 'train'
-        val_file = 'val'
-        params.num_classes = 100
+        base_file = 'base.json'
+        val_file =  'val.json'
+        json_file_read = True
+        params.num_classes = 200
     elif params.dataset == 'tiered_imagenet':
         base_file = 'train'
         params.num_classes = 351
     else:
         ValueError('dataset error')
 
-    base_datamgr = SimpleDataManager(params.data_path, params.image_size, batch_size=params.batch_size, dataset=params.dataset)
+    base_datamgr = SimpleDataManager(params.data_path, params.image_size, batch_size=params.batch_size, json_read=json_file_read)
     base_loader = base_datamgr.get_data_loader(base_file, aug=True)
 
     if params.val == 'meta':
         test_few_shot_params = dict(n_way=params.val_n_way, n_support=params.n_shot)
-        val_datamgr = SetDataManager(params.val_data_path, params.image_size, n_query=params.n_query, n_episode=params.val_n_episode, dataset=params.val_dataset, **test_few_shot_params)
+        val_datamgr = SetDataManager(params.data_path, params.image_size, n_query=params.n_query, n_episode=params.val_n_episode, json_read=json_file_read, **test_few_shot_params)
         val_loader = val_datamgr.get_data_loader(val_file, aug=False)
     else:
         val_loader = None
