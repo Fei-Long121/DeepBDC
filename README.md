@@ -138,8 +138,8 @@ Experimental results on miniImageNet and CUB. We report average results with 2,0
 
 ## Implementation details
 ### Datasets
-- miniImageNet: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)
-- CUB: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)
+- miniImageNet: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)，you can  download it from: [[BaiduCloud](https://pan.baidu.com/s/1Wi06keM-1WXP26YqwdpaFw?pwd=ankq)] [[GoogleDrive](https://drive.google.com/file/d/1aBxfcU5cn-htIlqriiOQCOXp_t9TOm9g/view?usp=sharing)].
+- CUB: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)，you can  download it from: [[BaiduCloud](https://pan.baidu.com/s/1JyVQC1-cLiPIl6yYAdlkeA?pwd=yrv1)] [[GoogleDrive](https://drive.google.com/file/d/1sbOiZP-U4A7NdhkJo7YzeffNf5GatIwk/view?usp=sharing)].
 - tieredImageNet
 - Aircraft
 - Cars
