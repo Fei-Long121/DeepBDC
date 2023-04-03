@@ -6,7 +6,7 @@ import json
 import numpy as np
 import torchvision.transforms as transforms
 import os
-
+import random
 identity = lambda x: x
 
 class SimpleDataset:
@@ -27,6 +27,13 @@ class SimpleDataset:
         self.label = label
         self.transform = transform
         self.target_transform = target_transform
+        self.checkimgsize(self.data[random.randint(0, len(self.label) - 1 )])
+    
+    def checkimgsize(self, data):
+        data_path = os.path.join(data)
+        data = Image.open(data_path).convert('RGB')
+        if data.size == (84, 84):
+            raise RuntimeError("Please use raw images instead of fixed resolution(84, 84) images !")
 
     def __getitem__(self, i):
         image_path = os.path.join(self.data[i])
@@ -57,6 +64,7 @@ class SetDataset:
         self.label = label
         self.transform = transform
         self.cl_list = np.unique(self.label).tolist()
+        self.checkimgsize(self.data[random.randint(0, len(self.label) - 1 )])
 
         self.sub_meta = {}
         for cl in self.cl_list:
@@ -73,6 +81,12 @@ class SetDataset:
         for cl in self.cl_list:
             sub_dataset = SubDataset(self.sub_meta[cl], cl, transform=transform)
             self.sub_dataloader.append(torch.utils.data.DataLoader(sub_dataset, **sub_data_loader_params))
+
+    def checkimgsize(self, data):
+        data_path = os.path.join(data)
+        data = Image.open(data_path).convert('RGB')
+        if data.size == (84, 84):
+            raise RuntimeError("Please use raw images instead of fixed resolution(84, 84) images !")
 
     def __getitem__(self, i):
         return next(iter(self.sub_dataloader[i]))
@@ -106,7 +120,14 @@ class SimpleDataset_JSON:
             self.meta = json.load(f)
         self.transform = transform
         self.target_transform = target_transform
+        self.checkimgsize(self.meta['image_names'][random.randint(0, len(self.meta['image_names']) - 1 )])
 
+    def checkimgsize(self, data):
+        data_path = os.path.join(data)
+        data = Image.open(data_path).convert('RGB')
+        if data.size == (84, 84):
+            raise RuntimeError("Please use raw images instead of fixed resolution(84, 84) images !")
+        
     def __getitem__(self, i):
         image_path = os.path.join(self.meta['image_names'][i])
         img = Image.open(image_path).convert('RGB')
@@ -125,6 +146,7 @@ class SetDataset_JSON:
             self.meta = json.load(f)
 
         self.cl_list = np.unique(self.meta['image_labels']).tolist()
+        self.checkimgsize(self.meta['image_names'][random.randint(0, len(self.cl_list) - 1 )])
 
         self.sub_meta = {}
         for cl in self.cl_list:
@@ -142,6 +164,12 @@ class SetDataset_JSON:
             sub_dataset = SubDataset_JSON(self.sub_meta[cl], cl, transform=transform)
             self.sub_dataloader.append(torch.utils.data.DataLoader(sub_dataset, **sub_data_loader_params))
 
+    def checkimgsize(self, data):
+        data_path = os.path.join(data)
+        data = Image.open(data_path).convert('RGB')
+        if data.size == (84, 84):
+            raise RuntimeError("Please use raw images instead of fixed resolution(84, 84) images !")
+        
     def __getitem__(self, i):
         return next(iter(self.sub_dataloader[i]))
 

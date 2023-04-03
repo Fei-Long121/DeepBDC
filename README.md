@@ -1,4 +1,4 @@
-# DeepBDC for few-shot learning
+# DeepBDC For Few-shot Larning
 <div>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="http://peihuali.org/DeepBDC/illustration.gif" width="80%"/>
 </div>
@@ -22,8 +22,9 @@ In this repo, we provide the implementation of the following paper:<br>
 
 
 ## Few-shot classification Results
-Experimental results on miniImageNet and CUB. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation. More details on the experiments can be seen in the paper.
+Experimental results on miniImageNet, CUB and tieredImageNet. We report average results with 2,000 randomly sampled episodes for both 1-shot and  5-shot evaluation. More details on the experiments can be seen in the paper.
 ### miniImageNet
+*We followed [DeepEMD](https://github.com/icoz69/DeepEMD) for data preprocessing.*
 <table>
          <tr>
              <th rowspan="2" style="text-align:center;">Method</th>
@@ -78,6 +79,7 @@ Experimental results on miniImageNet and CUB. We report average results with 2,0
 *Note that for Good-Embed and STL DeepBDC, a sequential self-distillation technique is used to obtain the pre-trained models; See the paper of Good-Embed for details.*
 
 ### CUB
+*We followed [CloserLookFewShot](https://github.com/wyharveychen/CloserLookFewShot) for data preprocessing.*
 <table>
          <tr>
              <th rowspan="2" style="text-align:center;">Method</th>
@@ -131,6 +133,61 @@ Experimental results on miniImageNet and CUB. We report average results with 2,0
 
 *Note that for Good-Embed and STL DeepBDC, a sequential self-distillation technique is used to obtain the pre-trained models; See the paper of Good-Embed for details.*
 
+### tieredImageNet
+*We followed [DeepEMD](https://github.com/icoz69/DeepEMD) for data preprocessing.*
+<table>
+         <tr>
+             <th rowspan="2" style="text-align:center;">Method</th>
+             <th colspan="2" style="text-align:center;">ResNet-12</th>
+             <th colspan="2" style="text-align:center;">Pre-trained models</th>
+             <th colspan="2" style="text-align:center;">Meta-trained models</th>
+         </tr>
+         <tr>
+             <th colspan="1" style="text-align:center;">5-way-1-shot</th>
+             <th colspan="1" style="text-align:center;">5-way-5-shot</th>
+             <th colspan="1" style="text-align:center;">GoogleDrive</th>
+             <th colspan="1" style="text-align:center;">BaiduCloud</th>
+             <th colspan="1" style="text-align:center;">GoogleDrive</th>
+             <th colspan="1" style="text-align:center;">BaiduCloud</th>
+         </tr>
+         <tr>
+             <td style="text-align:center">ProtoNet</td>
+             <td style="text-align:center;">68.31±0.51</td>
+             <td style="text-align:center;">83.85±0.36</td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/15AVdTLq0QyaJF7ccuvQUGK6TXtXuQybW?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1O8Tt-bHJiomz7n4gm2G7gA?pwd=j90s">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1Q8r0ub2uO0su34daLmBBCkqntfyv0blR?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1BIASKmHXgjwGIqOXGnDELA?pwd=atuw">Download</a></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">Good-Embed</td>
+             <td style="text-align:center;">71.52±0.69</td>
+             <td style="text-align:center;">86.03±0.58</td>
+             <td style="text-align:center;">N/A</td>
+             <td style="text-align:center;">N/A</td>
+             <td colspan="2" style="text-align:center;">N/A</td>
+         </tr>
+         <tr>
+             <td style="text-align:center">Meta DeepBDC</td>
+             <td style="text-align:center;">72.34±0.49</td>
+             <td style="text-align:center;">87.31±0.32</td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1V7jvTOktv_0LnfDSCawdCFOBSfx5Ttlv?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1zfIkOc2513cv56bksJddIA?pwd=kyil">Download</a></td>
+             <td style="text-align:center;"><a href="https://drive.google.com/drive/folders/1WbQEeM57PORiG5Y2XyhJA6VWm3LDZ0yb?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1LJ9tER3tf5jzj5fHHTeCgw?pwd=offl">Download</a></td>
+         </tr>
+         <tr>
+             <td style="text-align:center">STL DeepBDC</td>
+             <td style="text-align:center;">73.82±0.47</td>
+             <td style="text-align:center;">89.00±0.30</td>
+             <td style="text-align:center;"><a href="https://drive.google.com/file/d/1OWPJaoXC7UpJRsfNb3pNXjbVYAGt7_X4/view?usp=sharing">Download</a></td>
+             <td style="text-align:center;"><a href="https://pan.baidu.com/s/1D-HwS9IM6b1HuE2aLk1n4A?pwd=0o7n">Download</a></td>
+             <td colspan="2" style="text-align:center;">N/A</td>
+         </tr>
+</table>
+
+*Note that for Good-Embed and STL DeepBDC, a sequential self-distillation technique is used to obtain the pre-trained models; See the paper of Good-Embed for details.*
+
 ## References
 [BDC] G. J. Szekely and M. L. Rizzo. Brownian distance covariance. Annals of Applied Statistics, 3:1236–1265, 2009.<br>
 [ProtoNet] Jake Snell, Kevin Swersky, and Richard Zemel. Prototypical networks for few-shot learning. In NIPS, 2017.<br>
@@ -138,11 +195,9 @@ Experimental results on miniImageNet and CUB. We report average results with 2,0
 
 ## Implementation details
 ### Datasets
-- miniImageNet: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)，you can  download it from: [[BaiduCloud](https://pan.baidu.com/s/1Wi06keM-1WXP26YqwdpaFw?pwd=ankq)] [[GoogleDrive](https://drive.google.com/file/d/1aBxfcU5cn-htIlqriiOQCOXp_t9TOm9g/view?usp=sharing)].
-- CUB: We use the splits provided by [Chen et al.](https://github.com/wyharveychen/CloserLookFewShot)，you can  download it from: [[BaiduCloud](https://pan.baidu.com/s/1JyVQC1-cLiPIl6yYAdlkeA?pwd=yrv1)] [[GoogleDrive](https://drive.google.com/file/d/1sbOiZP-U4A7NdhkJo7YzeffNf5GatIwk/view?usp=sharing)].
-- tieredImageNet
-- Aircraft
-- Cars
+- miniImageNet: Download Link: [[BaiduCloud](https://pan.baidu.com/s/1Wi06keM-1WXP26YqwdpaFw?pwd=ankq)] [[GoogleDrive](https://drive.google.com/file/d/1aBxfcU5cn-htIlqriiOQCOXp_t9TOm9g/view?usp=sharing)].
+- CUB: Download Link: [[BaiduCloud](https://pan.baidu.com/s/1JyVQC1-cLiPIl6yYAdlkeA?pwd=yrv1)] [[GoogleDrive](https://drive.google.com/file/d/1sbOiZP-U4A7NdhkJo7YzeffNf5GatIwk/view?usp=sharing)].
+- tieredImageNet: Download Link: [[BaiduCloud](https://pan.baidu.com/s/14qKXc8982Ioso_0Fpt24QQ?pwd=90w2)] 
 
 ### Implementation environment
 *Note that the test accuracy may slightly vary with different Pytorch/CUDA versions, GPUs, etc.*

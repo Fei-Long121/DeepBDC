@@ -28,7 +28,7 @@ def train(params, base_loader, val_loader, model, stop_epoch):
             {'params': bas_params},
             {'params': model.dcov.temperature, 'lr': params.t_lr}], lr=params.lr, weight_decay=params.wd, nesterov=True, momentum=0.9)
     else:
-        optimizer = torch.optim.SGD(model.parameters(), lr=params.lr, weight_decay=5e-4, nesterov=True, momentum=0.9)
+        optimizer = torch.optim.SGD(model.parameters(), lr=params.lr, weight_decay=params.wd, nesterov=True, momentum=0.9)
     lr_scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer=optimizer, milestones=params.milestones, gamma=params.gamma)
 
 
@@ -40,21 +40,37 @@ def train(params, base_loader, val_loader, model, stop_epoch):
         model.train()
         trainObj, top1 = model.train_loop(epoch, base_loader, optimizer)
 
-        model.eval()
-        if params.val in ['meta']:
-            if params.val == 'meta':
-                valObj, acc = model.meta_test_loop(val_loader)
-            trlog['val_loss'].append(valObj)
-            trlog['val_acc'].append(acc)
-            if acc > trlog['max_acc']:
-                print("best model! save...")
-                trlog['max_acc'] = acc
-                trlog['max_acc_epoch'] = epoch
-                outfile = os.path.join(params.checkpoint_dir, 'best_model.tar')
-                torch.save({'epoch': epoch, 'state': model.state_dict()}, outfile)
-            print("val loss is {:.2f}, val acc is {:.2f}".format(valObj, acc))
-            print("model best acc is {:.2f}, best acc epoch is {}".format(trlog['max_acc'], trlog['max_acc_epoch']))
-
+        if params.dataset == 'tiered_imagenet':
+            if epoch >= params.milestones[1]:
+                model.eval()
+                if params.val in ['meta']:
+                    if params.val == 'meta':
+                        valObj, acc = model.meta_test_loop(val_loader)
+                    trlog['val_loss'].append(valObj)
+                    trlog['val_acc'].append(acc)
+                    if acc > trlog['max_acc']:
+                        print("best model! save...")
+                        trlog['max_acc'] = acc
+                        trlog['max_acc_epoch'] = epoch
+                        outfile = os.path.join(params.checkpoint_dir, 'best_model.tar')
+                        torch.save({'epoch': epoch, 'state': model.state_dict()}, outfile)
+                    print("val loss is {:.2f}, val acc is {:.2f}".format(valObj, acc))
+                    print("model best acc is {:.2f}, best acc epoch is {}".format(trlog['max_acc'], trlog['max_acc_epoch']))
+        else:
+            model.eval()
+            if params.val in ['meta']:
+                if params.val == 'meta':
+                    valObj, acc = model.meta_test_loop(val_loader)
+                trlog['val_loss'].append(valObj)
+                trlog['val_acc'].append(acc)
+                if acc > trlog['max_acc']:
+                    print("best model! save...")
+                    trlog['max_acc'] = acc
+                    trlog['max_acc_epoch'] = epoch
+                    outfile = os.path.join(params.checkpoint_dir, 'best_model.tar')
+                    torch.save({'epoch': epoch, 'state': model.state_dict()}, outfile)
+                print("val loss is {:.2f}, val acc is {:.2f}".format(valObj, acc))
+                print("model best acc is {:.2f}, best acc epoch is {}".format(trlog['max_acc'], trlog['max_acc_epoch']))
         if epoch % params.save_freq == 0:
             outfile = os.path.join(params.checkpoint_dir, '{:d}.tar'.format(epoch))
             torch.save({'epoch': epoch, 'state': model.state_dict()}, outfile)
@@ -102,7 +118,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--extra_dir', default='', help='recording additional information')
     parser.add_argument('--num_classes', default=64, type=int, help='total number of classes in training')
-    parser.add_argument('--save_freq', default=50, type=int, help='the frequency of saving model .pth file')
+    parser.add_argument('--save_freq', default=1, type=int, help='the frequency of saving model .pth file')
     parser.add_argument('--seed', default=1, type=int, help='random seed')
 
     parser.add_argument('--reduce_dim', default=640, type=int, help='the output dimensions of BDC dimensionality reduction layer')

@@ -80,7 +80,7 @@ class BaselineTrain(nn.Module):
         return float(top1_correct), len(y_label), self.loss_fn(scores, y_query), scores
 
     def train_loop(self, epoch, train_loader, optimizer):
-        print_freq = 200
+        print_freq = 2000
         avg_loss = 0
         total_correct = 0
 
