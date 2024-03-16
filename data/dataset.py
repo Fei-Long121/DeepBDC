@@ -7,7 +7,9 @@ import numpy as np
 import torchvision.transforms as transforms
 import os
 import random
-identity = lambda x: x
+#identity = lambda x: x
+def identity(x):
+    return x
 
 class SimpleDataset:
     def __init__(self, data_path, data_file_list, transform, target_transform=identity):

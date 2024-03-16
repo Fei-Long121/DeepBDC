@@ -42,12 +42,14 @@ class BaselineTrain(nn.Module):
 
     def forward(self, x):
         x = Variable(x.cuda())
+        #x = Variable(x.long().cuda())
         out = self.feature_forward(x)
         scores = self.classifier.forward(out)
         return scores
 
     def forward_meta_val(self, x):
-        x = Variable(x.cuda())        
+        x = Variable(x.cuda())
+        #x = Variable(x.long().cuda())
         x = x.contiguous().view(self.params.val_n_way * (self.params.n_shot + self.params.n_query), *x.size()[2:])
         
         out = self.feature_forward(x)
@@ -67,11 +69,13 @@ class BaselineTrain(nn.Module):
     def forward_loss(self, x, y):
         scores = self.forward(x)
         y = Variable(y.cuda())
+        #y = Variable(y.long().cuda())
         return self.loss_fn(scores, y), scores
 
     def forward_meta_val_loss(self, x):
         y_query = torch.from_numpy(np.repeat(range(self.params.val_n_way), self.params.n_query))
         y_query = Variable(y_query.cuda())
+        #y_query = Variable(y_query.long().cuda())
         y_label = np.repeat(range(self.params.val_n_way), self.params.n_query)
         scores = self.forward_meta_val(x)
         topk_scores, topk_labels = scores.data.topk(1, 1, True, True)
@@ -80,7 +84,8 @@ class BaselineTrain(nn.Module):
         return float(top1_correct), len(y_label), self.loss_fn(scores, y_query), scores
 
     def train_loop(self, epoch, train_loader, optimizer):
-        print_freq = 2000
+        #print_freq = 2000
+        print_freq = 100
         avg_loss = 0
         total_correct = 0
 
@@ -89,6 +94,7 @@ class BaselineTrain(nn.Module):
 
         for i, (x, y) in enumerate(train_loader):
             y = Variable(y.cuda())
+            #y = Variable(y.long().cuda())
             optimizer.zero_grad()
             loss, output = self.forward_loss(x, y)
             pred = output.data.max(1)[1]
@@ -109,6 +115,7 @@ class BaselineTrain(nn.Module):
         with torch.no_grad():
             for i, (x, y) in enumerate(val_loader):
                 y = Variable(y.cuda())
+                #y = Variable(y.long().cuda())
                 loss, output = self.forward_loss(x, y)
                 avg_loss = avg_loss + loss.item()
                 pred = output.data.max(1)[1]
@@ -195,6 +202,7 @@ class MetaTemplate(nn.Module):
 
     def parse_feature(self, x, is_feature):
         x = Variable(x.cuda())
+        #x = Variable(x.long().cuda())
         if is_feature:
             z_all = x
         else:

@@ -1,7 +1,7 @@
 gpuid=0
 cd ../../../
 
-DATA_ROOT=/path/mini_imagenet
+DATA_ROOT=F:/File/GitHub/miniImageNet
 MODEL_1SHOT_PATH=./checkpoints/mini_imagenet/ResNet12_meta_deepbdc_5way_1shot_metatrain/best_model.tar
 MODEL_5SHOT_PATH=./checkpoints/mini_imagenet/ResNet12_meta_deepbdc_5way_5shot_metatrain/best_model.tar
 

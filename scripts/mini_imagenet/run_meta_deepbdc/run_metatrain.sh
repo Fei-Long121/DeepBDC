@@ -1,6 +1,6 @@
 gpuid=0
 
-DATA_ROOT=/path/mini_imagenet
+DATA_ROOT=F:/File/GitHub/miniImageNet
 MODEL_PATH=./checkpoints/mini_imagenet/ResNet12_meta_deepbdc_pretrain/best_model.tar
 cd ../../../
 
